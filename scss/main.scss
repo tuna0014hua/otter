@@ -1,0 +1,229 @@
+// 字型
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
+@import "_base.scss";
+@import "_section.scss";
+@import "_forum.scss";
+
+// header ==================================
+.header {
+  width: 100%;
+  background: $areaBg;
+  box-shadow: $box-shadow;
+  z-index: 10;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+}
+
+// 列表區
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $num * 1.5;
+  ul {
+    list-style: none;
+  }
+}
+.left-menu {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: $num * 10;
+  margin-right: $num * 2;
+}
+.nav-menu,
+.login-menu {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  .menu-item {
+    // font-size: $num * 1.1;
+    margin: 0 5px;
+    padding: 5px 10px;
+    a {
+      display: block;
+      color: $link-color;
+      letter-spacing: 2px;
+    }
+  }
+}
+.login-item {
+  //   padding: 10px 5px;
+  a {
+    display: block;
+    color: $link-color;
+    letter-spacing: 2px;
+  }
+}
+.login-menu li:nth-child(1) {
+  width: $num * 2;
+  padding-right: 15px;
+}
+.login-menu li:nth-child(2) {
+  width: $num;
+  padding-right: 5px;
+}
+
+.nav-menu .menu-item:nth-child(-n + 2) {
+  background: $main-color;
+  border-radius: $num * 1.3;
+  a {
+    color: $btn-color;
+  }
+}
+
+.nav-menu .menu-item:nth-child(n + 3) a:hover,
+.nav-menu .active a {
+  color: $main-color;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $main-color;
+    margin-top: 5px;
+  }
+}
+
+// FOOTER  ==============================
+.main-footer {
+  width: 100%;
+  background: $footerBg;
+  padding: 1.5% 0;
+  margin-top: 5%;
+  p {
+    color: $text-color;
+    text-align: center;
+    font-size: $num * 0.7;
+    letter-spacing: $num * 0.2;
+
+    &:nth-child(1) {
+      color: $btn-color;
+      font-weight: bold;
+      span {
+        color: $text-color;
+        margin-left: 1%;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+// rwd ==================================
+@media screen and(max-width:60em) {
+  // nav
+  .menu-list {
+    display: none;
+  }
+  .menu-list-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $num * 1.3 0;
+    position: relative;
+    .logo {
+      width: $num * 8;
+      margin: 0;
+    }
+    .openbtn {
+      position: absolute;
+      color: $main-color;
+      left: 90%;
+      transform: translateX(10px);
+      cursor: pointer;
+    }
+  }
+  // burger line
+  .bars {
+    width: 15px;
+    height: 2px;
+    background: $main-color;
+    display: inline-block;
+    position: relative;
+    transform: rotate(180deg);
+    &::before,
+    &::after {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: $main-color;
+      display: inline-block;
+      position: absolute;
+    }
+    &::before {
+      top: 7px;
+    }
+    &::after {
+      top: -7px;
+    }
+  }
+  .overlay {
+    width: 100%;
+    height: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(19, 83, 132, 0.8);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  .closebtn {
+    width: 100%;
+    color: $btn-color;
+    font-size: 2em;
+    position: relative;
+    left: 88%;
+    top: 2%;
+    transform: translate(12px, 98px);
+  }
+  .nav-menu-mobile {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: $num * 2.2;
+    padding: 0;
+    .menu-item {
+      width: 100%;
+      padding: 15px 0;
+      a {
+        color: $btn-color;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .nav-menu-mobile .menu-item a:hover,
+  .nav-menu-mobile .active a {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 200%;
+      height: 2px;
+      background: $btn-color;
+      position: absolute;
+      left: -50%;
+      top: 130%;
+      transform: translate(0px, 0px);
+    }
+  }
+
+  // FOOTER  ==============================
+  .main-footer {
+    width: 100%;
+    background: $footerBg;
+    padding: 1.5% 0%;
+    p {
+      font-size: $num * 0.5;
+      letter-spacing: $num * 0.2;
+    }
+  }
+  //
+}

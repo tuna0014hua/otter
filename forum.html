@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rattoe</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- include another html files -->
+    <!-- <script src="http://www.w3schools.com/lib/w3data.js"></script> -->
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header nav -->
+        <header class="header">
+            <div class="main-container menu-list pc mobile">
+                <div class="left-menu">
+                    <a role="button" href="index.html" class="logo">
+                        <img src="images/assets/Rattoe_logo.svg" alt="Rattoe_Logo" width="100%" />
+                    </a>
+                    <ul class="nav-menu">
+                        <li class="menu-item"><a href="#">最新</a></li>
+                        <li class="menu-item"><a href="#">熱門</a></li>
+                        <li class="menu-item active"><a href="forum.html">感情</a></li>
+                        <li class="menu-item"><a href="#">生活</a></li>
+                        <li class="menu-item"><a href="#">綜藝</a></li>
+                        <li class="menu-item"><a href="#">生活</a></li>
+                    </ul>
+                </div>
+                <ul class="login-menu">
+                    <li class="login-item"><a href="#"><img src="images/assets/fb_icon.png" alt="FbIcon"
+                                width="100%" /></a>
+                    </li>
+                    <li class="login-item"><a href="#"><img src="images/assets/user_icon.png" alt="userIcon"
+                                width="100%" /></a>
+                    </li>
+                    <li class="login-item"><a href="#">登入</a></li>
+                </ul>
+            </div>
+            <!-- mobile -->
+            <div class="main-container menu-list-mobile pc mobile">
+                <a role="button" href="index.html" class="logo">
+                    <img src="images/assets/Rattoe_logo.svg" alt="Rattoe_Logo" width="100%" />
+                </a>
+                <!-- open -->
+                <div class="openbtn" onclick="openNav()">
+                    <!-- &#9776; -->
+                    <span class="bars"></span>
+                </div>
+                <!-- close -->
+                <div id="burger" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <ul class="nav-menu-mobile">
+                        <li class="menu-item"><a href="#">最新</a></li>
+                        <li class="menu-item"><a href="#">熱門</a></li>
+                        <li class="menu-item active"><a href="forum.html">感情</a></li>
+                        <li class="menu-item"><a href="#">生活</a></li>
+                        <li class="menu-item"><a href="#">綜藝</a></li>
+                        <li class="menu-item"><a href="#">生活</a></li>
+                        <li class="menu-item"><a href="#">Facbook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <main>
+                <section class="forum-area">
+                    <div class=" main-container forum">
+                        <div class="forum-img"><img src="images/assets/pic_l.png" alt="mainImg" width="100%" /></div>
+                        <article class="forum-post">
+                            <p class="date">2018/02/19<span>by 愛必</span></p>
+                            <h2>生活中的療癒日常</h2>
+                            <p>療癒未必要尋找老師或專業療法，生活最簡單的小事也可以協助你清理、淨化，請找一僻靜處，清楚默念</p>
+                            <div class="read-more">
+                                <a role="button" href="#">閱讀全文</a>
+                            </div>
+                            <div class="facebookBookBtn">
+                                <a role="button" href="#">Facebook登入</a>
+                            </div>
+                            <!-- mobile -->
+                            <div class="input-m">
+                                <p>輸入全名:</p><input type="text" />
+                            </div>
+                            <div class="result-m">
+                                <a role="button" href="#">觀看結果</a>
+                            </div>
+                            <div class="tag">
+                                <li><a href="#">標籤1</a></li>
+                                <li><a href="#">標籤2</a></li>
+                                <li><a href="#">標籤3</a></li>
+                                <li><a href="#">標籤4</a></li>
+                                <li><a href="#">標籤5</a></li>
+                                <li><a href="#">標籤不超過兩行</a></li>
+                                <li><a href="#">標籤6</a></li>
+                                <li><a href="#">標籤7</a></li>
+                            </div>
+                        </article>
+                        <hr />
+                        <div class="forum-link">
+                            <div class="top-link">
+                                <div class="under-link">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/share_icon.png" alt="shareIcon" width="100%" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/rank_icon.png" alt="rankIcon"
+                                                    width="100%" /><span>0</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/comments_icon.png" alt="commentIcon"
+                                                    width="100%" /><span>1</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="provide">
+                                    <p>題目提供者</p>
+                                    <a><img src="images/fb_img.png" alt="" width="100%" /></a>
+                                </div>
+                            </div>
+                            <div class="under-reply">
+                                <p><span>0</span>則留言</p>
+                                <div class="order-reply">
+                                    <p>依據排序</p>
+                                    <select name="post">
+                                        <option value="new" autofocus>最新</option>
+                                        <option value="old">最舊</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="user-reply">
+                            <img src="images/assets/fb_userimg.png" alt="userimg" width="100%" />
+                            <input type="text" id="reply" name="reply" placeholder="新增回應......">
+                        </div>
+                        <hr />
+                        <div class="facebook-reply">
+                            <a href="#"><i class="fa-brands fa-facebook-square"></i>
+                                Facebook留言外掛程式</a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="card-area main-container">
+                    <!-- include html -->
+                    <!-- <div w3-include-html=" card.html">
+            </div> -->
+                    <h2 class="unit-title">推薦測驗</h2>
+                    <div class="card-grid">
+                        <div class="item1 card">
+                            <div class="card-img">
+                                <img src="images/post_cover/post_cover_05.png" alt="適合你的2018必看電影" width="100%" />
+                            </div>
+                            <article>
+                                <h3>適合你的2018必看電影</h3>
+                                <p>旅蛙是敘述著一隻喜歡旅遊的青蛙，這是一款輕鬆悠閒的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。</p>
+                                <p class="date">2018/02/19</p>
+                                <div class="under-link">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/share_icon.png" alt="shareIcon" width="100%" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/rank_icon.png" alt="rankIcon"
+                                                    width="100%" /><span>0</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/comments_icon.png" alt="commentIcon"
+                                                    width="100%" /><span>1</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="btn">
+                                        <a href="#" role="button">
+                                            立即測驗
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- item1 end -->
+                        <div class="item2 card">
+                            <div class="card-img">
+                                <img src="images/post_cover/post_cover_02.png" alt="你的視覺年齡是幾歲?" width="100%" />
+                            </div>
+                            <article>
+                                <h3>你的視覺年齡是幾歲?</h3>
+                                <p>旅蛙是敘述著一隻喜歡旅遊的青蛙，這是一款輕鬆悠閒的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。</p>
+                                <p class="date">2018/02/19</p>
+                                <div class="under-link">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/share_icon.png" alt="shareIcon" width="100%" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/rank_icon.png" alt="rankIcon"
+                                                    width="100%" /><span>0</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/comments_icon.png" alt="commentIcon"
+                                                    width="100%" /><span>1</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="btn">
+                                        <a href="#" role="button">
+                                            立即測驗
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- item 2 end -->
+                        <div class="item3 card">
+                            <div class="card-img">
+                                <img src="images/post_cover/post_cover_03.png" alt="你家的旅蛙是甚麼性格" width="100%" />
+                            </div>
+                            <article>
+                                <h3>你家的旅蛙是甚麼性格</h3>
+                                <p>旅蛙是敘述著一隻喜歡旅遊的青蛙，這是一款輕鬆悠閒的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。</p>
+                                <p class="date">2018/02/19</p>
+                                <div class="under-link">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/share_icon.png" alt="shareIcon" width="100%" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/rank_icon.png" alt="rankIcon"
+                                                    width="100%" /><span>0</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/assets/comments_icon.png" alt="commentIcon"
+                                                    width="100%" /><span>1</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="btn">
+                                        <a href="#" role="button">
+                                            立即測驗
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- item3 end -->
+                    </div>
+                </section>
+
+                <div class="moreBtn"><a role="button" href="#">更多測驗</a></div>
+
+
+            </main>
+
+            <!-- footer -->
+            <footer class=" main-footer">
+                <div class="main-container">
+                    <p>隱私權政策．聯絡客服<span>免責聲明：本站所有內容僅供娛樂用途</span></p>
+                    <p>COPYRIGHT © 2018．QUIZ RATTOE BY RATTOE INC.</p>
+                </div>
+            </footer>
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- wrapper end -->
+
+
+
+</body>
+
+</html>
