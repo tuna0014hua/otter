@@ -446,7 +446,7 @@ a:link {
 
 .forum-area {
   background: #fbfbfb;
-  margin-top: -3%;
+  margin-top: -4%;
   padding: 5%;
 }
 
@@ -654,6 +654,41 @@ a:link {
   display: none;
 }
 
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fbfbfb;
+  font-weight: bold;
+  font-size: 2em;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: url("../images/assets/pic_l.png") no-repeat top center;
+  background-size: cover;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-image: none;
+  background-color: #3b5998;
+}
+
 .unit-title {
   width: 100%;
   text-align: center;
@@ -730,7 +765,9 @@ a:link {
     padding: 3%;
   }
   .result-m {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
     text-align: center;
     margin: 8% 0;
@@ -740,10 +777,14 @@ a:link {
     color: #ffffff;
     border-radius: 2em;
     padding: 2% 40%;
+    font-size: 0.9em;
   }
   .top-link {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .top-link .provide {
     -ms-flex-wrap: wrap;
@@ -792,6 +833,15 @@ a:link {
     padding: 4%;
   }
   .facebook-reply a {
+    display: none;
+  }
+  #shareLink {
+    background-color: #fbfbfb;
+    width: 100%;
+    z-index: 10;
+  }
+  .prev,
+  .next {
     display: none;
   }
   .unit-title::after {

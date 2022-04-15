@@ -1,7 +1,7 @@
 // forum-area
 .forum-area {
   background: $areaBg;
-  margin-top: -3%;
+  margin-top: -4%;
   padding: 5%;
 }
 .forum {
@@ -145,6 +145,36 @@
   display: none;
 }
 
+// left right arrow
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: $areaBg;
+  font-weight: bold;
+  font-size: $num * 2;
+  transition: 0.6s ease;
+  user-select: none;
+  background: url("../images/assets/pic_l.png") no-repeat top center;
+  background-size: cover;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-image: none;
+  background-color: $denimBlueBtn;
+}
+
 // unit title
 .unit-title {
   width: 100%;
@@ -216,7 +246,7 @@
     }
   }
   .result-m {
-    display: block;
+    display: flex;
     width: 100%;
     text-align: center;
     margin: 8% 0;
@@ -225,14 +255,13 @@
       color: $btn-color;
       border-radius: $num * 2;
       padding: 2% 40%;
+      font-size: $num * 0.9;
     }
   }
 
   .top-link {
     flex-wrap: wrap;
-    // .under-link {
-    //   //   position: fixed;
-    // }
+    justify-content: center;
     .provide {
       flex-wrap: wrap;
       justify-content: center;
@@ -271,6 +300,19 @@
     }
   }
   .facebook-reply a {
+    display: none;
+  }
+  //   sharelink mobile
+  #shareLink {
+    background-color: $areaBg;
+    // border-top: 1px solid $title-color;
+    width: 100%;
+    z-index: 10;
+  }
+
+  //   arrow
+  .prev,
+  .next {
     display: none;
   }
 
