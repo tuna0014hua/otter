@@ -393,7 +393,7 @@ a:link {
   }
   .area01 .main-text .under-link .btn {
     position: absolute;
-    top: 45%;
+    top: 70%;
     left: 73%;
   }
   .narrative {
@@ -441,6 +441,14 @@ a:link {
   }
   .area03 {
     display: none;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .area01 .main-text .under-link .btn {
+    position: absolute;
+    top: 55%;
+    left: 73%;
   }
 }
 
